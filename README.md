@@ -1,25 +1,30 @@
 ## **Project Overview**
 
-- Briefly describe the concept of your project.
+- Hyrule Explorer is an interactive, user-friendly webpage that allows users to explore the vast world of The Legend of Zelda: Breath of the Wild. Users will be able to browse and filter through these categories, enhancing their gaming experience.
 
 ## **Project Members**
 
-- List the people a part of this group.
+- Rochelle Williams
+- Jessica Xia
 
 ## **Features**
 
 - List the key features of the project (the three distinct types of user interactions).
+- filtering
+- sorting
+- modifying data views
 
 ## **Technologies Used**
 
 - List the technologies and tools used in the project:
-    - APIs
-    - Libraries
+    - Hyrule Compendium API
+    - Libraries: Express
     - Other
  
 ## **Live Demo**
 
 - Include a link to the live version of the project hosted on Glitch.
+- https://flashy-seemly-glockenspiel.glitch.me/
 
 ## **Credits**
 
@@ -29,3 +34,5 @@
 ## **Future Enhancements**
 
 - List any future enhancements you would like to make or improve given more time.
+- improve css
+- improve sort feature

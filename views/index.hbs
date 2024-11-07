@@ -1,0 +1,89 @@
+<!--Put your HTML elements here (don't need to put <head> or <body> here. That is set in layout.hbs-->
+<h1>Hyrule Compendium</h1>
+<div id="controls">
+    <h2>Filter by Category:</h2>
+    <select id="categorySelector">
+        <option value="all">All Categories</option>
+        <option value="creatures">Creatures</option>
+        <option value="monsters">Monsters</option>
+        <option value="materials">Materials</option>
+        <option value="equipment">Equipment</option>
+        <option value="treasure">Treasure</option>
+    </select>
+    <button id="showAllCategories">Show All Categories</button>
+
+    <h2>Filter by Location:</h2>
+    <select id="locationSelector">
+        <optgroup label="Miscellaneous">
+            <option value="all">All Locations</option>
+            <option value="Greater Hyrule">Greater Hyrule</option>
+        </optgroup>
+        <optgroup label="Central Hyrule">
+            <option value="Hyrule Castle">Hyrule Castle</option>
+            <option value="Hyrule Field">Hyrule Field</option>
+            <option value="Hyrule Ridge">Hyrule Ridge</option>
+            <option value="Great Hyrule Forest">Great Hyrule Forest</option>
+            <option value="Satori Mountain">Satori Mountain</option>
+        </optgroup>
+        <optgroup label="Faron">
+            <option value="Lake Hylia">Lake Hylia</option>
+            <option value="Faron Grasslands">Faron Grasslands</option>
+        </optgroup>
+        <optgroup label="Necluda">
+            <option value="West Necluda">West Necluda</option>
+            <option value="Necluda Sea">Necluda Sea</option>
+            <option value="East Necluda">East Necluda</option>
+            <option value="Lake Floria">Lake Floria</option>
+            <option value="Floria Bridge">Floria Bridge</option>
+        </optgroup>
+        <optgroup label="Gerudo">
+            <option value="Gerudo Highlands">Gerudo Highlands</option>
+            <option value="Gerudo Desert">Gerudo Desert</option>
+            <option value="Yiga Clan Hideout">Yiga Clan Hideout</option>
+        </optgroup>
+        <optgroup label="Hebra">
+            <option value="Hebra Mountains">Hebra Mountains</option>
+            <option value="Tabantha Frontier">Tabantha Frontier</option>
+        </optgroup>
+        <optgroup label="Eldin">
+            <option value="Eldin Mountains">Eldin Mountains</option>
+            <option value="Eldin Canyon">Eldin Canyon</option>
+            <option value="Death Mountain">Death Mountain</option>
+        </optgroup>
+        <optgroup label="Akkala">
+            <option value="Akkala Highlands">Akkala Highlands</option>
+            <option value="Deep Akkala">Deep Akkala</option>
+            <option value="Akkala Sea">Akkala Sea</option>
+        </optgroup>
+        <optgroup label="Lanayru">
+            <option value="Lanayru Great Spring">Lanayru Great Spring</option>
+            <option value="Lanayru Sea">Lanayru Sea</option>
+            <option value="Lanayru Wetlands">Lanayru Wetlands</option>
+            <option value="Mount Lanayru">Mount Lanayru</option>
+            <option value="Crenel Peak">Crenel Peak</option>
+        </optgroup>
+        <optgroup label="Divine Beasts">
+            <option value="Divine Beast Vah Naboris">Divine Beast Vah Naboris</option>
+            <option value="Divine Beast Vah Rudania">Divine Beast Vah Rudania</option>
+            <option value="Divine Beast Vah Ruta">Divine Beast Vah Ruta</option>
+            <option value="Divine Beast Vah Medoh">Divine Beast Vah Medoh</option>
+        </optgroup>
+
+    </select>
+    <button id="showAllLocations">Show All Locations</button>
+    <h2>Filter Monsters:</h2>
+    <select id="monsterSelector">
+        <option value="all">Show All Monsters</option>
+        <option value="common">Common Enemies</option>
+        <option value="guardian">Guardians</option>
+        <option value="sub">Sub-Bosses</option>
+        <option value="boss">Bosses</option>
+    </select>
+
+    <button id="sortAlphabetically">Sort Alphabetically</button>
+    <button id="toggleView">Switch to Card View</button>
+
+</div>
+
+<div id="monsterButton"></div>
+<div id="compendium"></div>

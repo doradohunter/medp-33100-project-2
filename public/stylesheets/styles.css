@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #3b6ea5;
+    font-size: 2.5em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #3b6ea5;
+    color: #ffffff;
+    border: none;
+    padding: 5px 12px;
+    font-size: 0.95em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #2a4f7a;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #1f3a5a;
+    transform: translateY(0);
+}
+
+#toggleView {
+    background-color: #2a9d8f;
+}
+
+#toggleView:hover {
+    background-color: #21867a;
+}
+
+#controls {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    max-width: 800px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    text-align: left;
+}
+
+#controls h2 {
+    font-size: 1.1em;
+    color: #3b6ea5;
+    margin: 0 0 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+#categorySelector,
+#locationSelector,
+#monsterSelector {
+    padding: 8px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#compendium {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+.box {
+    width: 350px;
+    padding:  30px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.list-item {
+    width: 100%;
+    padding: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.list-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+}
+
+.title_case {
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    #controls {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    #compendium {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 280px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #categorySelector,
+    #locationSelector {
+        max-width: 100%;
+    }
+}
