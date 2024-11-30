@@ -1,31 +1,32 @@
 ## **Project Overview**
 
-- Briefly describe the concept of your project.
+- Our project is meant to show off major historical events from all around the world in a timeline layout.
 
 ## **Project Members**
 
-- List the people a part of this group.
+- Arlenis Pena
+- Alexandra Ernest
 
 ## **Features**
 
-- List the key features of the project (the three distinct types of user interactions).
+- The user can serach a specific year in time to see the major historical events that were occuring during that year.
+- The user can filter through _4_ designated topics and see which events corresponsed to the related topic.
+- The user can sort through each event through the _next_and _previous_ buttons and see lists of events in 10 event intervals. 
 
 ## **Technologies Used**
 
-- List the technologies and tools used in the project:
-    - APIs
-    - Libraries
-    - Other
+- The technologies and tools used in the project:
+    - Ninga Api for Historical Events - https://api-ninjas.com/api/historicalevents 
+    - Vis.js library for timeline layout- https://visjs.org
  
 ## **Live Demo**
-
-- Include a link to the live version of the project hosted on Glitch.
+- https://alex-arlenis-project-2.glitch.me/
 
 ## **Credits**
 
-- List any third-party assets used in the project (e.g., sound effects, images, fonts) and provide proper attribution.
-- Acknowledge any resources, tutorials, or references you used to help complete the project.
+- Resorces that were used are commented in our code.
+- Button Css - https://getcssscan.com/css-buttons-examples
 
 ## **Future Enhancements**
 
-- List any future enhancements you would like to make or improve given more time.
+- Make the seacrh button filter out not only the year but the text as well..

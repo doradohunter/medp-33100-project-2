@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link href="https://visjs.github.io/vis-timeline/styles/vis-timeline-graph2d.min.css" rel="stylesheet">
+  
+  </head>
+  <body>
+    <div class="page-header">
+      <h1 class="page-title">Historical Events</h1>
+      <div class="search-wapper">
+        <div class = "warning">Please enter a year between 1800-2022</div>
+        <label for="search" class="searchWord">Search Year:</label>
+        <input type="search" id="searchBar" data-search/>
+        <button id="searchButton">Search</button>
+      </div>
+      
+    </div>
+    
+    <div class="topic-buttons">
+      <button class="world-war">World War</button>
+      <button class="cold-war">Cold War</button>
+      <button class="american-civil-war">American Civil War</button>
+      <button class="covid">COVID-19 Pandemic</button>
+    </div>
+
+    <div id="visualization"></div>
+
+    <div class="page-buttons">
+      <button class="previous">Previous</button>
+      <button class="next">Next</button>
+    </div>
+
+    <div class="page-buttons-y">
+      <button class="previous-y">Previous</button>
+      <button class="next-y">Next</button>
+    </div>
+
+    <script src="https://visjs.github.io/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
+  </body>
+</html>
