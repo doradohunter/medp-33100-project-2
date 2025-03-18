@@ -1,0 +1,92 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Grove</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+      {{! header sections }}
+      <div class='nav-bar border'>
+        <a href="/" class="nav-title"><h3>Park Trails</h3></a>
+        <div class='nav-links'>
+          {{! links fill in later }}
+          <a href='#'>Parks</a>
+          <a href='#'>About</a>
+          <a href='#'>Login</a>
+        </div>
+      </div>
+      <div class='home-information border'>
+        <div>
+          <h1>Feel The Grove.</h1>
+          <p>Explore the parks of New York City</p>
+        </div>
+        <div class='join-today-button'>
+          <button>Join Today</button>
+        </div>
+      </div>
+    </header>
+    <section class='basic-park-information'>
+      {{! for search bar and sort by }}
+      <div class='search-section'>
+        {{! search bar }}
+        <div>
+          <input type='text' placeholder='Search Park Name' id='search-bar' />
+          <img src='/stylesheets/images/magnify.svg' alt='' width='30px' />
+        </div>
+        {{! sort by }}
+
+        <div class='sort-by-section'>
+          <label for='sort-by'>Sort By</label>
+          <select name='sort-by' id='sort-by'>
+            <option value='Default'>All</option>
+            <option value='Ascending Alphabet'>A-Z</option>
+            <option value='Descending Alphabet'>Z-A</option>
+            <option value='Ascending Quantity'>Most Trails</option>
+            <option value='Descending Quantity'>Least Trails</option>
+
+            {{! Add more options to dropdown later}}
+          </select>
+        </div>
+      </div>
+      <div class='outer'>
+        <img
+          src='/stylesheets/images/arrow-left.svg'
+          class='arrow left'
+          alt=''
+          width='50px'
+        />
+        <div class='inner'>
+          <div class='park-information'>
+          </div>
+        </div>
+        <img
+          src='/stylesheets/images/arrow-right.svg'
+          class='arrow right'
+          alt=''
+          width='50px'
+        />
+      </div>
+    </section>
+    <footer class='border'>
+      <div class='footer-left'>
+        <a href=''>Contact</a>
+        <a href=''>Legal</a>
+        <a href=''>Careers</a>
+        <a href=''>Donate</a>
+      </div>
+      <div class='footer-right'>
+        <a href=''>Telephone</a>
+        <a href=''>Fax</a>
+      </div>
+    </footer>
+
+    <script src='/javascripts/parkScript.js'></script>
+    <script>
+      let parks = [{{#each parks}} "{{this.name}}", {{/each}}]; 
+      let amount = [{{#each parks}} "{{this.amount}}", {{/each}}]; 
+      loadParks(parks);
+    </script>
+  </body>
+</html>

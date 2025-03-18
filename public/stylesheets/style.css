@@ -1,0 +1,199 @@
+@font-face {
+  font-family: 'DMSans';
+  src: url(/stylesheets/DMSans-Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font: 14px 'DMSans', 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 80vh;
+}
+
+.border,
+section {
+  padding: 0 50px;
+}
+
+header,
+.nav-bar,
+.nav-links,
+.home-information,
+.search-section,
+.search-section > div {
+  display: flex;
+}
+
+header {
+  color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.1), 
+    rgba(0, 0, 0, 0.7)
+  ), url('https://images.unsplash.com/photo-1519331379826-f10be5486c6f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.nav-bar {
+  padding: 10px 50px;
+  background-color: black;
+  opacity: 0.5;
+  justify-content: space-between;
+}
+
+.nav-title {
+  text-decoration: none;
+}
+
+.nav-bar h3 {
+  color: white;
+}
+
+.nav-links {
+  gap: 10px;
+}
+
+.home-information,
+.search-section {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-information h1 {
+  font-size: 5rem;
+}
+
+.join-today-button > button {
+  border: solid white;
+  color: white;
+  background: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+  transition: background-color color 200ms;
+}
+
+.join-today-button > button:hover {
+  background-color: white;
+  color: green;
+  cursor: pointer;
+}
+
+.container {
+  transition: all 250ms;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: gray 10px 10px 10px;
+}
+
+.container,
+.outer > img {
+  cursor: pointer;
+}
+
+.container > img {
+  width: 100%;
+}
+
+.basic-park-information {
+  padding: 40px 50px;
+}
+
+.search-section > div:first-child {
+  border: solid;
+}
+
+.search-section > div {
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+}
+
+.search-section > div > input {
+  border: none;
+  width: 30vw;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+}
+
+#search-bar {
+  outline: none;
+}
+
+.sort-by-section > label,
+#sort-by {
+  font-size: 1.5rem;
+}
+
+.outer {
+  overflow: hidden;
+  display: flex;
+  gap: 40px;
+  width: 80vw;
+  margin: auto;
+}
+
+.inner {
+  width: 500vw;
+}
+
+.park-information {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 30px auto;
+  gap: 30px;
+}
+
+.park-image {
+  text-align: center;
+  background-color: lightgray;
+  height: 300px;
+}
+
+.park-name {
+  padding: 5px;
+  color: white;
+  background-color: black;
+}
+
+.park-name > h3 {
+  font-size: 1.2rem;
+}
+
+.load-more > button {
+  font-size: 1.5rem;
+  width: 400px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: green;
+  color: white;
+}
+
+footer > div {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-right {
+  justify-content: flex-end;
+}
+
+a {
+  color: white;
+  /* color: #00b7ff; */
+}

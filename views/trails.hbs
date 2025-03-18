@@ -1,0 +1,125 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/trailStyle.css' />
+    
+    {{!-- Plotly --}}
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header>
+      {{! header sections }}
+      <div class='nav-bar border'>
+        <a href="/" class="nav-title"><h3>Park Trails</h3></a>
+        <div class='nav-links'>
+          {{! links fill in later }}
+          <a href='#'>Parks</a>
+          <a href='#'>About</a>
+          <a href='#'>Login</a>
+        </div>
+      </div>
+      <div class='park-information border'>
+        <h1>Park's Official Name
+          <span><img
+              src='/stylesheets/images/information-outline.svg'
+              alt=''
+              width='40px'
+            /></span></h1>
+        <p>Brief Description of Park’s history or some other detail</p>
+      </div>
+    </header>
+    <section class='show-difficulty'>
+      <h1>"There are no shortcuts to any place worth going."</h1>
+      <p>Explore # trails in this park!</p>
+    </section>
+    <div class="buttons">
+      <button id="show-bar-graph" class="show-button">Show Difficulty Bar Graph</button>
+      <button id="show-map" class="show-button">Show Map</button>
+    </div>
+      <div class="see-more">
+      {{! navigate to different parks }}
+      <div class='see-more-content'>
+        <h2>See More</h2>
+
+        <div class="change-content">
+          <div>Prospect Park</div>
+          <div>Wolfe's Pond Park</div>
+          <div>Highbridge Park</div>
+          <div>Alley Pond Park</div>
+          <div>High Rock Park</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-park">
+      <div id="show-bar-graph" class="sections">
+        <section id="bar-graph">
+      </div>
+      <div id="show-map" class="sections">
+        <section class='map'>
+         <div id="map"></div>
+        </section>
+      </div>
+    </div>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+
+<!-- Include Leaflet Control Geocoder CSS and JavaScript -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const lat = 40.77;
+    const lng = -73.95;
+    const zoom = 10;
+
+ 
+    const map = L.map('map').setView([lat, lng], zoom);
+    setTimeout(function(){ map.invalidateSize()}, 500);
+
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([lat, lng]).addTo(map).openPopup();
+
+   
+    L.Control.geocoder({
+      defaultMarkGeocode: false
+    })
+    .on('markgeocode', function(e) {
+      const bbox = e.geocode.bbox;
+      const poly = L.polygon([
+        bbox.getSouthEast(),
+        bbox.getNorthEast(),
+        bbox.getNorthWest(),
+        bbox.getSouthWest()
+      ]).addTo(map);
+      map.fitBounds(poly.getBounds());
+      L.marker(e.geocode.center).addTo(map).bindPopup(e.geocode.name).openPopup();
+    })
+    .addTo(map);
+
+    
+    const mapElement = document.getElementById('map');
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            map.invalidateSize();
+            observer.disconnect(); 
+        }
+    });
+    observer.observe(mapElement);
+  });
+</script>
+    <script src='/javascripts/trailScript.js'></script>
+    <script>
+      let parkName = [{{#each trails}} '{{@key}}', {{/each}}]
+      let parkTrails = [{{#each trails}} [{{#each this}} {{this}}, {{/each}}], {{/each}}];
+      setUp()
+    </script>
+  </body>
+</html>

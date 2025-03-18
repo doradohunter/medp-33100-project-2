@@ -1,0 +1,194 @@
+@font-face {
+  font-family: 'DMSans';
+  src: url(/stylesheets/DMSans-Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font: 14px 'DMSans', 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 80vh 20vh 4vh 76vh;
+  grid-template-columns: 20vw 60vw 20vw;
+}
+
+.border {
+  padding: 0 50px;
+}
+
+header,
+.nav-bar,
+.nav-links,
+.map,
+.see-more,
+.see-more-content {
+  display: flex;
+}
+
+header {
+  grid-column: 1 / 4;
+  color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header,
+.nav-bar {
+  justify-content: space-between;
+}
+
+.nav-bar {
+  padding: 10px 50px;
+  background-color: black;
+  opacity: 0.5;
+  justify-content: space-between;
+}
+
+.nav-title {
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+.nav-links {
+  gap: 10px;
+}
+
+.park-information h1 {
+  font-size: 5rem;
+}
+
+.show-difficulty {
+  padding-left: 50px;
+  grid-column: 1 / 3;
+  background-color: #22577A;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.show-difficulty > h1 {
+  font-size: 3rem;
+}
+
+.show-difficulty > p {
+  color: lightgray;
+  font-size: 2rem;
+}
+
+.for-bar-graph {
+  height: 100%;
+}
+
+.plot-container {
+  height: 100%;
+}
+
+.plot-container > div > svg {
+  height: inherit;
+}
+
+.sections {
+  display: none;
+  grid-column: 1 / 3;
+}
+
+.change-content > div {
+  transition: background-color 200ms ;
+}
+
+.change-content > div:hover {
+  background-color: gray;
+}
+
+.change-content > div,
+button {
+  cursor: pointer;
+}
+
+.buttons {
+  background-color: #22577A;
+  grid-row: 3/4;
+  grid-column: 1 / 3;
+}
+
+.show-button {
+  height: 100%;
+  border: none;
+  font-size: 1.3rem;
+  padding: 0 10px;
+}
+
+.about-park {
+  grid-column: 1 / 3;
+}
+
+.map {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+
+.map > div {
+  background-color: lightgray;
+  width: 80%;
+  height: 60%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.see-more-content {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.see-more {
+  justify-content: center;
+  grid-column: 3 / 4;
+  grid-row: 2 / 5;
+  background-color: #e9edc9;
+  padding-top: 20px;
+}
+
+.see-more > h2,
+.see-more-content > div > div {
+  font-size: 1.3rem;
+}
+
+.see-more-content > div {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 130%;
+}
+
+.buttons > button:first-child {
+  background-color: rgb(254, 250, 224);
+}
+
+#show-bar-graph {
+  height: 100%;
+}
+
+.see-more-content > div > div {
+  background-color: lightgray;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#bar-graph{
+  height: 100%;
+}
